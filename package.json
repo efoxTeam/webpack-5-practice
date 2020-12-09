@@ -1,0 +1,33 @@
+{
+  "name": "webpack-5-practice",
+  "version": "1.0.0",
+  "description": "webpack5 babel sass eslint svg img css",
+  "main": "index.js",
+  "author": "ckken",
+  "license": "MIT",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack serve --config webpack/webpack.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.prod.js",
+    "start": "serve ./dist"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.0.1",
+    "css-minimizer-webpack-plugin": "^1.1.5",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^1.3.2",
+    "postcss-loader": "^4.1.0",
+    "postcss-preset-env": "^6.7.0",
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.0",
+    "serve": "^11.3.2",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.10.0",
+    "webpack-chain": "^6.5.1",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {}
+}

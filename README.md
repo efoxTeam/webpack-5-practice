@@ -1,5 +1,5 @@
 # 📦 Webpack 5 Practice 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)   
 利用 webpack 5、babel、sass、postcss、webapck-chain 等模块、库实现生产项目构建的实战
 
 

@@ -1,0 +1,40 @@
+@import 'var';
+
+html {
+  font-size: $font-size;
+  font-family: $font-family;
+  background: $background-color;
+  color: $font-color;
+  max-width: $page-width;
+  line-height: 1.4;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-self: center;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  max-width: 90vw;
+  margin-bottom: 20px!important;
+}
+p{
+  margin-top: 20px!important;
+}
+
+button{
+  border-radius: 20px;
+}
+
+@import 'reset';
+@import 'button';

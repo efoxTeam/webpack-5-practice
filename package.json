@@ -6,9 +6,9 @@
   "author": "ckken",
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack serve --config webpack/webpack.dev.js",
-    "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.prod.js",
-    "start": "serve ./dist"
+    "dev": "webpack serve --config webpack/development.js",
+    "build": "webpack --config webpack/production.js",
+    "start": "serve ./dist --cors -S -p 8000"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -16,6 +16,9 @@
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@efox/eslint-config-react-prittier-ts": "^1.2.3",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.4.0",
     "cross-env": "^7.0.3",
     "css-loader": "^5.0.1",
     "css-minimizer-webpack-plugin": "^1.1.5",
@@ -33,7 +36,8 @@
     "webpack": "^5.10.0",
     "webpack-chain": "^6.5.1",
     "webpack-cli": "^4.2.0",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.4.1"
   },
   "dependencies": {},
   "husky": {

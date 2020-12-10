@@ -13,6 +13,18 @@ module.exports = {
     path: paths.build,
     filename: '[name].[contenthash:8].js',
     publicPath: '/',
+    // es5 兼容性设置
+    environment: {
+      arrowFunction: false,
+      bigIntLiteral: false,
+      const: false,
+      destructuring: false,
+      forOf: false,
+      dynamicImport: false,
+      module: false,
+    },
+    // 自动适配 module federation 域名
+    publicPath: 'auto',
   },
 
   // 自定义bundle 生成结果

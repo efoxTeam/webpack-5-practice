@@ -46,7 +46,15 @@
 - [`copy-webpack-plugin`](https://github.com/webpack-contrib/copy-webpack-plugin) - 复制文件到生产目录
 - [`html-webpack-plugin`](https://github.com/jantimon/html-webpack-plugin) - 根据模板生成HTML
 - [`mini-css-extract-plugin`](https://github.com/webpack-contrib/mini-css-extract-plugin) - 将 CSS 提取到单独的文件中，为每个包含 CSS 的 JS 文件创建一个 CSS 文件，并且支持 CSS 和 SourceMaps 的按需加载
-- [`css-minimizer-webpack-plugin`](https://webpack.js.org/plugins/css-minimizer-webpack-plugin/) - 压缩CSS 文件
+- [`css-minimizer-webpack-plugin`](https://webpack.js.org/plugins/css-minimizer-webpack-plugin/) - 压缩CSS 文件 取代 `optimize-css-assets-webpack-plugin`
+
+## 🎯 注意 
+> webpack5 对一下内容的相关说明  `持续整理中`
++ `terser-webpack-plugin` 默认支持 
++ `pnp-webpack-plugin` 暂不支持
++ `url-loader` & `file-loader` 用 asset 进行取代 
++ `optimization.minimizer` 设置方式 `[new 自定义插件(), '...']`
++ `webpack-dev-server@4.0` 目前还在开发状态、稳定性有待提升、不支持 `liveload`的 `overlay`
 
 
 ## 👋 作者 

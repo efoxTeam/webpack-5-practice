@@ -11,12 +11,10 @@ module.exports = {
   experiments: {
     // mjs: true,
     // outputModule: true,
-    // 开启后 暂时 不支持调试环境 arrow function 转 es5
-    topLevelAwait: true,
+    topLevelAwait: true, // 开启后 暂时 不支持调试环境 arrow function 转 es5
     // importAsync: true,
     // importAwait: true,
-    // file-loader、url-loader、raw-loader
-    // asset: true,
+    // asset: true, // file-loader、url-loader、raw-loader,系统已经默认支持
     //wasm
     asyncWebAssembly: true,
     syncWebAssembly: true,

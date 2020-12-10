@@ -55,7 +55,8 @@
 + `url-loader` & `file-loader` 用 asset 进行取代 
 + `optimization.minimizer` 设置方式 `[new 自定义插件(), '...']`
 + `webpack-dev-server@4.0` 目前还在开发状态、稳定性有待提升、不支持 `liveload`的 `overlay`
-
++ [es5兼容性配置](https://github.com/efoxTeam/webpack-5-practice/blob/6f8308535a425820819e2e809d792575832276a5/webpack/common.js#L30)
++ [实验性功能](https://github.com/efoxTeam/webpack-5-practice/blob/6f8308535a425820819e2e809d792575832276a5/webpack/common.js#L11)
 
 ## 👋 作者 
 + [Ken.Xu](https://github.com/ckken)

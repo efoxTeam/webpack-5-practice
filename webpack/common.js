@@ -7,7 +7,20 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   // 入口文件
   entry: [paths.src + '/index.js'],
-
+  // 实验性项目
+  experiments: {
+    // mjs: true,
+    // outputModule: true,
+    // 开启后 暂时 不支持调试环境 arrow function 转 es5
+    topLevelAwait: true,
+    // importAsync: true,
+    // importAwait: true,
+    // file-loader、url-loader、raw-loader
+    // asset: true,
+    //wasm
+    asyncWebAssembly: true,
+    syncWebAssembly: true,
+  },
   // 输出的静态资源 和 模块
   output: {
     path: paths.build,

@@ -23,7 +23,7 @@
 - [`webpack-dev-server`](https://github.com/webpack/webpack-dev-server) - webpack 开发服务
 - [`ebpack-chain`](https://github.com/neutrinojs/webpack-chain) - webpack 灵活配置 `可以实现插件化配置`
 - [`cross-env`](https://github.com/kentcdodds/cross-env) - 跨平台环境命令
-
+- [`webpackbar`](https://github.com/nuxt-contrib/webpackbar) - Nuxt webpack 进度显示插件
 ### Babel
 
 - [`@babel/core`](https://www.npmjs.com/package/@babel/core) - 将ES6+转换为向后兼容的JavaScript

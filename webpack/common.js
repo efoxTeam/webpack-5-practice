@@ -5,6 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
 const DotenvWebpack = require('dotenv-webpack')
+const WebpackBar = require('webpackbar')
 module.exports = (config, {node_env, deploy_env}) => {
   const conf = {
     // 持久化缓存
@@ -104,7 +105,7 @@ module.exports = (config, {node_env, deploy_env}) => {
           },
         ],
       },
-      //
+      // DotenvWebpack
       DotenvWebpack: {
         plugin: DotenvWebpack,
         args: [
@@ -115,6 +116,15 @@ module.exports = (config, {node_env, deploy_env}) => {
             systemvars: true, // 加载所有预定义的'process.env'每个dotenv规范都会胜过任何本地变量。
             silent: true, // 隐藏错误提示
             defaults: false, // 如果没设置 .env 默认加载 '.env.defaults'
+          },
+        ],
+      },
+      // WebpackBar
+      WebpackBar: {
+        plugin: WebpackBar,
+        args: [
+          {
+            reporters: ['fancy'],
           },
         ],
       },

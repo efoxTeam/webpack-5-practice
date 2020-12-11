@@ -1,5 +1,6 @@
 import './styles/index.scss'
 import printMe from './print.js'
+console.log('DEPLOY_ENV:', process.env.DEPLOY_ENV)
 function component() {
   const element = document.getElementById('root')
   const btn = document.createElement('button')

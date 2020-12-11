@@ -21,7 +21,7 @@
 - [`webpack`](https://github.com/webpack/webpack)
 - [`webpack-cli`](https://github.com/webpack/webpack-cli) - webpack 命令行
 - [`webpack-dev-server`](https://github.com/webpack/webpack-dev-server) - webpack 开发服务
-- [`webpack-merge`](https://github.com/survivejs/webpack-merge) - webpack 配置合并
+- [`ebpack-chain`](https://github.com/neutrinojs/webpack-chain) - webpack 灵活配置 `可以实现插件化配置`
 - [`cross-env`](https://github.com/kentcdodds/cross-env) - 跨平台环境命令
 
 ### Babel
@@ -48,6 +48,10 @@
 - [`mini-css-extract-plugin`](https://github.com/webpack-contrib/mini-css-extract-plugin) - 将 CSS 提取到单独的文件中，为每个包含 CSS 的 JS 文件创建一个 CSS 文件，并且支持 CSS 和 SourceMaps 的按需加载
 - [`css-minimizer-webpack-plugin`](https://webpack.js.org/plugins/css-minimizer-webpack-plugin/) - 压缩CSS 文件 取代 `optimize-css-assets-webpack-plugin`
 
+## 🍄 新特征 
++ [es5兼容性配置](https://github.com/efoxTeam/webpack-5-practice/blob/6f8308535a425820819e2e809d792575832276a5/webpack/common.js#L30)
++ [实验性功能](https://github.com/efoxTeam/webpack-5-practice/blob/6f8308535a425820819e2e809d792575832276a5/webpack/common.js#L11)
+
 ## 🎯 注意 
 > webpack5 对一下内容的相关说明  `持续整理中`
 + `terser-webpack-plugin` 默认支持 
@@ -55,8 +59,7 @@
 + `url-loader` & `file-loader` 用 asset 进行取代 
 + `optimization.minimizer` 设置方式 `[new 自定义插件(), '...']`
 + `webpack-dev-server@4.0` 目前还在开发状态、稳定性有待提升、不支持 `liveload`的 `overlay`
-+ [es5兼容性配置](https://github.com/efoxTeam/webpack-5-practice/blob/6f8308535a425820819e2e809d792575832276a5/webpack/common.js#L30)
-+ [实验性功能](https://github.com/efoxTeam/webpack-5-practice/blob/6f8308535a425820819e2e809d792575832276a5/webpack/common.js#L11)
++ `eslint-webpack-plugin` 取代 `eslint-loader`
 
 ## 👋 作者 
 + [Ken.Xu](https://github.com/ckken)

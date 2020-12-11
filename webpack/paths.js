@@ -9,4 +9,5 @@ module.exports = {
   nodeModule: path.resolve(appDirectory, 'node_module'),
   template: path.resolve(appDirectory, 'template'),
   public: path.resolve(appDirectory, 'public'),
+  entry: path.resolve(appDirectory, 'src/index.js'),
 }

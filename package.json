@@ -6,8 +6,8 @@
   "author": "ckken",
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development DEPLOY_ENV=dev webpack serve --config webpack/config.js",
-    "build": "cross-env NODE_ENV=production DEPLOY_ENV=prod webpack --config webpack/config.js",
+    "dev": "cross-env NODE_ENV=development DEPLOY_ENV=dev webpack serve --config ./webpack/config.js",
+    "build": "cross-env NODE_ENV=production DEPLOY_ENV=prod webpack --config ./webpack/config.js",
     "start": "serve ./dist --cors -S -p 8000"
   },
   "devDependencies": {

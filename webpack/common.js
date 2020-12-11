@@ -7,6 +7,13 @@ const ESLintPlugin = require('eslint-webpack-plugin')
 const DotenvWebpack = require('dotenv-webpack')
 module.exports = (config, {node_env, deploy_env}) => {
   const conf = {
+    // 持久化缓存
+    cache: {
+      type: 'filesystem',
+      buildDependencies: {
+        config: [path.resolve(paths.app, 'webpack/config.js'), path.resolve(__filename)],
+      },
+    },
     // 入口文件
     entry: {index: paths.entry},
     // 实验性项目

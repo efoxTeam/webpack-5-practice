@@ -53,6 +53,7 @@
 ## 🍄 新特征 
 + [es5兼容性配置](https://github.com/efoxTeam/webpack-5-practice/blob/6f8308535a425820819e2e809d792575832276a5/webpack/common.js#L30)
 + [实验性功能](https://github.com/efoxTeam/webpack-5-practice/blob/6f8308535a425820819e2e809d792575832276a5/webpack/common.js#L11)
++ [缓存](https://github.com/efoxTeam/webpack-5-practice/blob/4ee5c55f0f9f2adf577b10bc548d9ae98a039241/webpack/common.js#L12) - 使用缓存需要把相对路径加全如 :`./webpack/config.js`
 
 ## 🎯 注意 
 > webpack5 对一下内容的相关说明  `持续整理中`

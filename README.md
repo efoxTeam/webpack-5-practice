@@ -47,6 +47,8 @@
 - [`html-webpack-plugin`](https://github.com/jantimon/html-webpack-plugin) - 根据模板生成HTML
 - [`mini-css-extract-plugin`](https://github.com/webpack-contrib/mini-css-extract-plugin) - 将 CSS 提取到单独的文件中，为每个包含 CSS 的 JS 文件创建一个 CSS 文件，并且支持 CSS 和 SourceMaps 的按需加载
 - [`css-minimizer-webpack-plugin`](https://webpack.js.org/plugins/css-minimizer-webpack-plugin/) - 压缩CSS 文件 取代 `optimize-css-assets-webpack-plugin`
+- [`dotenv-webpack`](https://github.com/mrsteele/dotenv-webpack) - 不同部署环境切换到不同配置
+- [`eslint-webpack-plugin`](https://github.com/webpack-contrib/eslint-webpack-plugin) - eslint自动格式化
 
 ## 🍄 新特征 
 + [es5兼容性配置](https://github.com/efoxTeam/webpack-5-practice/blob/6f8308535a425820819e2e809d792575832276a5/webpack/common.js#L30)

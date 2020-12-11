@@ -56,7 +56,7 @@
 + [缓存](https://github.com/efoxTeam/webpack-5-practice/blob/4ee5c55f0f9f2adf577b10bc548d9ae98a039241/webpack/common.js#L12) - 使用缓存需要把相对路径加全如 :`./webpack/config.js`
 
 ## 🎯 注意 
-> webpack5 对一下内容的相关说明  `持续整理中`
+> webpack5 对以下内容的相关说明  `持续整理中`
 + `terser-webpack-plugin` 默认支持 
 + `pnp-webpack-plugin` 暂不支持
 + `url-loader` & `file-loader` 用 asset 进行取代 

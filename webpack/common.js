@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
 const DotenvWebpack = require('dotenv-webpack')
 const WebpackBar = require('webpackbar')
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 module.exports = (config, {node_env, deploy_env}) => {
   const conf = {
     // 持久化缓存
@@ -13,6 +14,12 @@ module.exports = (config, {node_env, deploy_env}) => {
       type: 'filesystem',
       buildDependencies: {
         config: [path.resolve(paths.app, 'webpack/config.js'), path.resolve(__filename)],
+      },
+    },
+    cache: false,
+    optimization: {
+      splitChunks: {
+        chunks: 'all',
       },
     },
     // 入口文件
@@ -32,10 +39,10 @@ module.exports = (config, {node_env, deploy_env}) => {
     // 输出的静态资源 和 模块
     output: {
       path: paths.build,
-      filename: '[name].[contenthash:8].js',
-      publicPath: '/',
+      // filename: '[name].[contenthash:8].js',
+      filename: '[name].[contenthash:8].mjs',
       // es5 兼容性设置
-      environment: {
+      /* environment: {
         arrowFunction: false,
         bigIntLiteral: false,
         const: false,
@@ -43,7 +50,7 @@ module.exports = (config, {node_env, deploy_env}) => {
         forOf: false,
         dynamicImport: false,
         module: false,
-      },
+      }, */
       // 自动适配 module federation 域名
       publicPath: 'auto',
     },
@@ -81,6 +88,22 @@ module.exports = (config, {node_env, deploy_env}) => {
             favicon: paths.template + '/favicon.png', // favicon 文件
             template: paths.template + '/index.html', // 模板文件
             filename: 'index.html', // 项目的入口文件名
+          },
+        ],
+      },
+      //ScriptExtHtmlWebpackPlugin
+      ScriptExtHtmlWebpackPlugin: {
+        plugin: ScriptExtHtmlWebpackPlugin,
+        args: [
+          {
+            module: /\.mjs$/,
+            custom: [
+              {
+                test: /\.js$/,
+                attribute: 'nomodule',
+                value: '',
+              },
+            ],
           },
         ],
       },
@@ -134,7 +157,34 @@ module.exports = (config, {node_env, deploy_env}) => {
     module: {
       rule: {
         // JavaScript: 使用 babel编译JS文件
-        scripts: {test: /\.js$/, exclude: /node_modules/, use: {babel: {loader: 'babel-loader'}}},
+        scripts: {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          use: {
+            babel: {
+              loader: 'babel-loader',
+              options: {
+                presets: [
+                  [
+                    '@babel/preset-env',
+                    {
+                      bugfixes: true,
+                      // targets: 'last 2 versions',
+                      targets: ['>0.25%', 'not ie 11'],
+                      debug: true,
+                      // useBuiltIns: 'entry',
+                      useBuiltIns: 'usage',
+                      targets: {
+                        esmodules: true,
+                      },
+                    },
+                  ],
+                  '@babel/preset-react',
+                ],
+              },
+            },
+          },
+        },
 
         // Styles: 插入 CSS 和 sourceMap 到 head
         styles: {

@@ -5,12 +5,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 module.exports = module.exports = (config, {node_env, deploy_env}) => {
   const conf = {
     mode: 'production',
-    devtool: false,
-    output: {
-      path: paths.build,
-      publicPath: '/',
-      filename: 'js/[name].[contenthash].js',
-    },
+    devtool: 'cheap-source-map',
     optimization: {
       minimize: true,
       minimizer: {
